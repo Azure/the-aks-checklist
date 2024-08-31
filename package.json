@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lgmorand/aks-checklist.git"
+    "url": "git+https://github.com/Azure/the-aks-checklist.git"
   },
   "author": "lgmorand",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lgmorand/aks-checklist/issues"
+    "url": "https://github.com/Azure/the-aks-checklist/issues"
   },
-  "homepage": "https://github.com/lgmorand/aks-checklist#readme",
+  "homepage": "https://github.com/Azure/the-aks-checklist#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^9.0.0",
