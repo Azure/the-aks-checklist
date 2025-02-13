@@ -21,6 +21,8 @@ Another good reading in another format is the [AKS baseline reference architectu
 
 **[Tommy Falgout](https://github.com/lastcoolnameleft)**
 
+**[Lionel Gurret](https://github.com/gurretl)**
+
 ## How to contribute
 
 Fork the repo, add the best practices in the items.json file (at least in English which will remain the single source of trust) and then do a pull request **on the staging branch** ;-)
