@@ -14,7 +14,7 @@ jobs:
   generateFile:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       
       - name: Create output folder
         run: mkdir ./output
@@ -70,7 +70,7 @@ jobs:
         working-directory: ./output
         
       - name: Azure Blob Storage Upload
-        uses: bacongobbler/azure-blob-storage-upload@v3.0.0
+        uses: bacongobbler/azure-blob-storage-upload@50f7d898b7697e864130ea04c303ca38b5751c50 # v3.0.0
         with:
           connection_string: ${{ secrets.BLOB_CONNECTION_STRING }}
           container_name: $web
@@ -80,7 +80,7 @@ jobs:
 
       - name: Upload a Build Artifact
         if: ${{ always() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: Offline resources
           path: |
