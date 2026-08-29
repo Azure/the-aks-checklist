@@ -16,9 +16,9 @@ jobs:
         node-version: [10.x]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
@@ -26,12 +26,12 @@ jobs:
     - run: gulp build
 
     - name: Get current time
-      uses: josStorer/get-current-time@v2.1.1
+      uses: josStorer/get-current-time@5979d2f4455ed5df566aa6df67cedd77d17afaa9 # v2.1.1
       id: current-time
       with:
         format: DD-MM-YYYY
 
-    - uses: cschleiden/replace-tokens@v1.2
+    - uses: cschleiden/replace-tokens@8e091844c27eb36853efbfade5ffca07260f0250 # v1.2
       name: inject date
       with:
         files: '["**/*.html"]'
@@ -50,13 +50,13 @@ jobs:
         mkdir dist/fta
         cp ./data/scripts/aks_checklist.en.json ./dist/fta/aks_checklist.en.json
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
       with:
         name: CheckList
         path: dist
  
     - name: Azure Static Website Deploy
-      uses: feeloor/azure-static-website-deploy@v0.1.2
+      uses: feeloor/azure-static-website-deploy@f649dcdeaa1b1bda54a22e167d73ec8c8aa7b224 # v0.1.2
       env:
         # The name of the directory you want to upload
         SOURCE_DIR: "./dist"
